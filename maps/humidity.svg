@@ -1,0 +1,96 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<!-- Created with Inkscape (http://www.inkscape.org/) -->
+
+<svg
+   xmlns:dc="http://purl.org/dc/elements/1.1/"
+   xmlns:cc="http://creativecommons.org/ns#"
+   xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#"
+   xmlns:svg="http://www.w3.org/2000/svg"
+   xmlns="http://www.w3.org/2000/svg"
+   xmlns:sodipodi="http://sodipodi.sourceforge.net/DTD/sodipodi-0.dtd"
+   xmlns:inkscape="http://www.inkscape.org/namespaces/inkscape"
+   width="10.151328"
+   height="16.000004"
+   id="svg2"
+   version="1.1"
+   inkscape:version="0.48.3.1 r9886"
+   sodipodi:docname="temperature.svg">
+  <defs
+     id="defs4" />
+  <sodipodi:namedview
+     id="base"
+     pagecolor="#ffffff"
+     bordercolor="#666666"
+     borderopacity="1.0"
+     inkscape:pageopacity="0.0"
+     inkscape:pageshadow="2"
+     inkscape:zoom="0.49497475"
+     inkscape:cx="344.03428"
+     inkscape:cy="-56.700846"
+     inkscape:document-units="px"
+     inkscape:current-layer="layer1"
+     showgrid="false"
+     inkscape:window-width="1871"
+     inkscape:window-height="1056"
+     inkscape:window-x="49"
+     inkscape:window-y="24"
+     inkscape:window-maximized="1"
+     fit-margin-top="0"
+     fit-margin-left="0"
+     fit-margin-right="0"
+     fit-margin-bottom="0" />
+  <metadata
+     id="metadata7">
+    <rdf:RDF>
+      <cc:Work
+         rdf:about="">
+        <dc:format>image/svg+xml</dc:format>
+        <dc:type
+           rdf:resource="http://purl.org/dc/dcmitype/StillImage" />
+        <dc:title></dc:title>
+      </cc:Work>
+    </rdf:RDF>
+  </metadata>
+  <g
+     inkscape:label="Calque 1"
+     inkscape:groupmode="layer"
+     id="layer1"
+     transform="translate(-119.81461,-829.78168)">
+    <g
+       id="g3908"
+       transform="matrix(0.12673266,0,0,0.12673266,65.887711,709.54483)"
+       inkscape:export-filename="/home/baptiste/Images/Projets/SmarTB/humidity.png"
+       inkscape:export-xdpi="19.79743"
+       inkscape:export-ydpi="19.79743">
+      <path
+         inkscape:connector-curvature="0"
+         style="font-size:medium;font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;text-indent:0;text-align:start;text-decoration:none;line-height:normal;letter-spacing:normal;word-spacing:normal;text-transform:none;direction:ltr;block-progression:tb;writing-mode:lr-tb;text-anchor:start;baseline-shift:baseline;color:#000000;fill:none;stroke:#2e3436;stroke-width:3.54999995;stroke-miterlimit:4;stroke-opacity:1;stroke-dasharray:none;marker:none;visibility:visible;display:inline;overflow:visible;enable-background:accumulate;font-family:Sans;-inkscape-font-specification:Sans"
+         d="m 462.5248,988.14848 c 0,11.38147 9.27481,20.65632 20.65625,20.65632 11.38144,0 20.44991,-9.27675 20.65625,-20.65632 0.26786,-14.77238 -10.2663,-25.31919 -20.46875,-37.62946 -11.9762,14.57018 -19.71136,22.52958 -20.84375,37.62946 z"
+         id="path3870"
+         sodipodi:nodetypes="csscc" />
+      <path
+         id="path3874"
+         d="m 483.3125,958.90625 c -9.25632,11.26119 -15.21853,17.42318 -16.09375,29.09375 0,8.79666 7.17213,15.9687 15.96875,15.9688 8.79663,0 15.80927,-7.17361 15.96875,-15.9688 0.20703,-11.41745 -7.95837,-19.57924 -15.84375,-29.09375 z m -3.25,11.71875 c 0.52116,-0.007 1.00747,0.0949 1.40625,0.375 1.5951,1.12054 1.32297,4.27154 -0.59375,7 -1.91672,2.72846 -4.74865,4.02679 -6.34375,2.90625 -1.5951,-1.12054 -1.35422,-4.24029 0.5625,-6.96875 1.43754,-2.04635 3.40528,-3.29073 4.96875,-3.3125 z"
+         style="font-size:medium;font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;text-indent:0;text-align:start;text-decoration:none;line-height:normal;letter-spacing:normal;word-spacing:normal;text-transform:none;direction:ltr;block-progression:tb;writing-mode:lr-tb;text-anchor:start;baseline-shift:baseline;color:#000000;fill:#2e3436;stroke:none;stroke-width:3.54999995;marker:none;visibility:visible;display:inline;overflow:visible;enable-background:accumulate;font-family:Sans;-inkscape-font-specification:Sans"
+         inkscape:connector-curvature="0" />
+    </g>
+    <g
+       id="g3912"
+       transform="matrix(0.12673266,0,0,0.12673266,61.422561,717.70822)"
+       inkscape:export-filename="/home/baptiste/Images/Projets/SmarTB/humidity.png"
+       inkscape:export-xdpi="19.79743"
+       inkscape:export-ydpi="19.79743">
+      <path
+         sodipodi:nodetypes="csscc"
+         id="path3914"
+         d="m 462.5248,988.14848 c 0,11.38147 9.27481,20.65632 20.65625,20.65632 11.38144,0 20.44991,-9.27675 20.65625,-20.65632 0.26786,-14.77238 -10.2663,-25.31919 -20.46875,-37.62946 -11.9762,14.57018 -19.71136,22.52958 -20.84375,37.62946 z"
+         style="font-size:medium;font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;text-indent:0;text-align:start;text-decoration:none;line-height:normal;letter-spacing:normal;word-spacing:normal;text-transform:none;direction:ltr;block-progression:tb;writing-mode:lr-tb;text-anchor:start;baseline-shift:baseline;color:#000000;fill:none;stroke:#2e3436;stroke-width:3.54999995;stroke-miterlimit:4;stroke-opacity:1;stroke-dasharray:none;marker:none;visibility:visible;display:inline;overflow:visible;enable-background:accumulate;font-family:Sans;-inkscape-font-specification:Sans"
+         inkscape:connector-curvature="0" />
+      <path
+         style="font-size:medium;font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;text-indent:0;text-align:start;text-decoration:none;line-height:normal;letter-spacing:normal;word-spacing:normal;text-transform:none;direction:ltr;block-progression:tb;writing-mode:lr-tb;text-anchor:start;baseline-shift:baseline;color:#000000;fill:#2e3436;stroke:none;stroke-width:3.54999995;marker:none;visibility:visible;display:inline;overflow:visible;enable-background:accumulate;font-family:Sans;-inkscape-font-specification:Sans"
+         d="m 483.3125,958.90625 c -9.25632,11.26119 -15.21853,17.42318 -16.09375,29.09375 0,8.79666 7.17213,15.9687 15.96875,15.9688 8.79663,0 15.80927,-7.17361 15.96875,-15.9688 0.20703,-11.41745 -7.95837,-19.57924 -15.84375,-29.09375 z m -3.25,11.71875 c 0.52116,-0.007 1.00747,0.0949 1.40625,0.375 1.5951,1.12054 1.32297,4.27154 -0.59375,7 -1.91672,2.72846 -4.74865,4.02679 -6.34375,2.90625 -1.5951,-1.12054 -1.35422,-4.24029 0.5625,-6.96875 1.43754,-2.04635 3.40528,-3.29073 4.96875,-3.3125 z"
+         id="path3916"
+         inkscape:connector-curvature="0" />
+    </g>
+  </g>
+</svg>
