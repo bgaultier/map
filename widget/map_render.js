@@ -136,7 +136,7 @@ function draw_map() {
 	  	.attr("transform", function(d) { return "translate(" + d.x + "," + d.y + ")"; });
         	update_list();
 	}
-	
+
 	d3.json(path + "map/nodes.json", function(error, graph) {
 	  force
 		  .nodes(graph.nodes)
@@ -152,14 +152,12 @@ function draw_map() {
 		  .data(graph.nodes)
 		.enter().append("g")
 		  .attr("class", "node")
-		  .attr("id", function(d) { return d.hostname; })
 		  .attr("transform", function(d) { return "translate(" + d.x + "," + d.y + ")" ; })
-		  //.on("mouseover", function(d) { d3.selectAll(this.childNodes).transition().style("opacity", 0.5); })
-		  //.on("mouseout", fade(1))
+		  .on("mouseover", function(d) { d3.selectAll(this.childNodes).style("opacity", 1); })
+		  .on("mouseout", function(d) { d3.selectAll(this.childNodes).filter(":not(:first-child)").style("opacity", 0); d3.select(this.firstChild).style("opacity", 1); })
 		  .call(drag);
 		  
 	  node.append("circle")
-	  	.attr("class", "node")
 	  	.attr("r", radius)
 	  	.style("fill", function(d) { return d3.rgb(color(d.typeid)).brighter(); })
 	  	.style("stroke", function(d) { return color(d.typeid); })
@@ -168,14 +166,17 @@ function draw_map() {
 	  node.append("text")
 	  	.attr("dx", 6)
 	  	.attr("dy", ".35em")
+	  	.attr("opacity", 0)
 	  	.text(function(d) { return d.hostname });
 	  	
-	  var feedsicons = node.selectAll(".feedsicons")
+	  var test = node.selectAll(".text")
 		    .data(function(d) { return d.feedlist; })
 		  .enter().append("image")
 		    .attr("x", function(d, i) { return i * 10 + radius; } )
 		    .attr("y", 8)
 		    .attr("width", 10)
+		    .attr("height", 18)
+		    .attr("opacity", 0)
 		    .attr("xlink:href", function(d) { return icon(d.name); } )
 		    .on("click",  function(d) {  window.open(path + "vis/auto?feedid=" + d.id, '_blank'); });
 	  	

@@ -9,12 +9,12 @@
    xmlns="http://www.w3.org/2000/svg"
    xmlns:sodipodi="http://sodipodi.sourceforge.net/DTD/sodipodi-0.dtd"
    xmlns:inkscape="http://www.inkscape.org/namespaces/inkscape"
-   width="10.151328"
+   width="9"
    height="16.000004"
    id="svg2"
    version="1.1"
    inkscape:version="0.48.3.1 r9886"
-   sodipodi:docname="temperature.svg">
+   sodipodi:docname="humidity.svg">
   <defs
      id="defs4" />
   <sodipodi:namedview
@@ -24,9 +24,9 @@
      borderopacity="1.0"
      inkscape:pageopacity="0.0"
      inkscape:pageshadow="2"
-     inkscape:zoom="0.49497475"
-     inkscape:cx="344.03428"
-     inkscape:cy="-56.700846"
+     inkscape:zoom="126.71354"
+     inkscape:cx="11.725903"
+     inkscape:cy="8.9406525"
      inkscape:document-units="px"
      inkscape:current-layer="layer1"
      showgrid="false"
@@ -47,7 +47,7 @@
         <dc:format>image/svg+xml</dc:format>
         <dc:type
            rdf:resource="http://purl.org/dc/dcmitype/StillImage" />
-        <dc:title></dc:title>
+        <dc:title />
       </cc:Work>
     </rdf:RDF>
   </metadata>
@@ -58,7 +58,7 @@
      transform="translate(-119.81461,-829.78168)">
     <g
        id="g3908"
-       transform="matrix(0.12673266,0,0,0.12673266,65.887711,709.54483)"
+       transform="matrix(0.12673266,0,0,0.12673266,64.727621,709.54483)"
        inkscape:export-filename="/home/baptiste/Images/Projets/SmarTB/humidity.png"
        inkscape:export-xdpi="19.79743"
        inkscape:export-ydpi="19.79743">
