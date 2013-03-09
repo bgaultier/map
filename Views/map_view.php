@@ -13,10 +13,10 @@ http://openenergymonitor.org
 // no direct access
 defined('EMONCMS_EXEC') or die('Restricted access');
 
-global $path, $session;
+global $user, $path, $session;
 ?>
-<script type="text/javascript" src="<?php print $path; ?>Lib/flot/jquery.min.js"></script>
-<script type="text/javascript" src="<?php print $path; ?>Lib/listjs/list.js"></script>
+<script type="text/javascript" src="<?php print $path; ?>Modules/map/map.js"></script>
+<script type="text/javascript" src="<?php print $path; ?>Lib/tablejs/table.js"></script>
 <script type="text/javascript" src="<?php print $path; ?>Modules/map/widget/map_render.js"></script>
 <script type="text/javascript" src="http://d3js.org/d3.v3.js"></script>
 
@@ -30,77 +30,48 @@ global $path, $session;
 
 <script type="text/javascript">
 
+  path = "<?php echo $path; ?>";
+  apikey = "<?php if ($session['read']) echo $user->get_apikey_read($session['userid']); ?>";
+
   // The list is created using list.js - a javascript dynamic user interface list creator created as part of this project
   // list.js is still in early development.
 
-  var list =
-  {
-    'element': "nodelist",
- 
-    'items': <?php echo json_encode($nodes); ?>,
+  table.element = "#nodelist";
 
-    'groupby': 'typeid',
+  table.fields = {
+    'id':{'title':"<?php echo _('Id'); ?>", 'type':"fixed"},
+    'hostname':{'title':"<?php echo _('hostname'); ?>", 'type':"text"},
+    'comments':{'title':"<?php echo _('comments'); ?>", 'type':"text"},
+    'x':{'title':"<?php echo _('x'); ?>", 'type':"text"},
+    'y':{'title':"<?php echo _('y'); ?>", 'type':"text"},
+    'typeid':{'title':"<?php echo _('typeid'); ?>", 'type':"select", 'options':['','emonTx','emonBase','emonGLCD','emonPlug','emonMeter','Arduino','No type']},
 
-    'fields': 
-    {
-      'id':{}, 
-      'hostname':
-      {
-        'input':"text"
-      },
-      'comments':
-      {
-        'input':"text"
-      },
-      'x':
-      {
-        'input':"text"
-      }, 
-      'y':
-      {
-        'input':"text"
-      }, 
-      'typeid':
-      {
-        'format':"select",
-        'input':"select", 
-        'options':
-        {
-			1:"emonTx",
-			2:"emonBase",
-			3:"emonGLCD",
-			4:"emonPlug",
-			5:"emonMeter",
-			6:"Arduino",
-			7:"<?php echo _("No type"); ?>"
-		}
-      },
-    },
-    
-    'actions':{},
-    
-    'group_prefix': "Type ",
+    // Actions
+    'edit-action':{'title':'', 'type':"edit"},
+    'delete-action':{'title':'', 'type':"delete"}
+  }
 
-    'path': "<?php echo $path; ?>",
-    'controller': "map",
-    'listaction': "list",
+  table.groupby = 'typeid';
 
-    'editable': true,
-    'deletable': true,
-    'restoreable': false,
+  table.data = map.list();
+  table.draw();
 
-    'group_properties': {},
+  $("#nodelist").bind("onSave", function(e,id,fields_to_update){
+    map.set(id,fields_to_update); 
+  });
 
-    'updaterate': 5000
-  };
+  $("#nodelist").bind("onDelete", function(e,id,row){
+    map.delete(id);
+  });
 
-  listjs(list);
-  
-  path = "<?php echo $path; ?>";
-  apikey = "<?php if ($session['read']) echo get_apikey_read($session['userid']); ?>";
 </script>
 
 <?php } else { ?>
+
+<script>
+  path = "<?php echo $path; ?>";
+  apikey = "<?php if ($session['read']) echo $user->get_apikey_read($session['userid']); ?>";
+</script>
 
 <div class="alert alert-block">
 <h4 class="alert-heading">No feeds created</h4>
@@ -120,8 +91,8 @@ global $path, $session;
 				<?php if (isset($inputNodes) && count($inputNodes)) { ?>
 				<div class="controls">
 					<select id="nodeid" name="nodeid" style="width:233px;">
-				<?php foreach ($inputNodes as $input) { ?>
-						<option><?php echo $input[0]; ?></option>
+				<?php foreach ($inputNodes as $item) { ?>
+						<option><?php echo $item; ?></option>
 				<?php } // end foreach ?>
 					</select>
 				</div>
@@ -161,7 +132,7 @@ global $path, $session;
 				<label class="control-label" for="type"><?php echo _("Type"); ?></label>
 				<div class="controls">
 					    <select id="type" name="type" style="width:233px;">
-							<option>emonTx</option>
+							<option >emonTx</option>
 							<option>emonBase</option>
 							<option>emonGLCD</option>
 							<option>emonPlug</option>
