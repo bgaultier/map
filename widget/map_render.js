@@ -126,18 +126,17 @@ function draw_map() {
 	}
 	
 	function dragend(d) {
-		$.ajax({
-			url: path + "map"+"/set.json?id="+d.id+"&field=x&value="+d.x, async:false
-		});
-		$.ajax({
-			url: path + "map"+"/set.json?id="+d.id+"&field=y&value="+d.y, async:false
-		});
+
+    $.ajax({ url: path+"map/set.json", data: "id="+d.id+"&fields="+JSON.stringify({'x':d.x,'y':d.y}), async: false, success: function(data){} });
+
 		d3.select(this)
 	  	.attr("transform", function(d) { return "translate(" + d.x + "," + d.y + ")"; });
-        	update_list();
+          table.data = map.list();
+          table.draw();
 	}
 
 	d3.json(path + "map/nodes.json", function(error, graph) {
+    console.log(graph);
 	  force
 		  .nodes(graph.nodes)
 		  .links(graph.links);
