@@ -74,8 +74,8 @@ global $user, $path, $session;
 </script>
 
 <div class="alert alert-block">
-<h4 class="alert-heading">No feeds created</h4>
-<p>Feeds are where your monitoring data is stored. The recommended route for creating feeds is to start by creating inputs (see the inputs tab). Once you have inputs you can either log them straight to feeds or if you want you can add various levels of input processing to your inputs to create things like daily average data or to calibrate inputs before storage.</p>
+<h4 class="alert-heading">No nodes created</h4>
+<p><?php echo _("Nodes are used to represent the real sensors on a map. The recommended route for creating nodes is to start by creating inputs and feeds. Then, you will have to create a node using the form below."); ?>
 </div>
 
 <?php } ?> 
