@@ -40,11 +40,11 @@ global $user, $path, $session;
 
   table.fields = {
     'id':{'title':"<?php echo _('Id'); ?>", 'type':"fixed"},
-    'hostname':{'title':"<?php echo _('hostname'); ?>", 'type':"text"},
-    'comments':{'title':"<?php echo _('comments'); ?>", 'type':"text"},
+    'hostname':{'title':"<?php echo _('Hostname'); ?>", 'type':"text"},
+    'comments':{'title':"<?php echo _('Comments'); ?>", 'type':"text"},
     'x':{'title':"<?php echo _('x'); ?>", 'type':"text"},
     'y':{'title':"<?php echo _('y'); ?>", 'type':"text"},
-    'typeid':{'title':"<?php echo _('typeid'); ?>", 'type':"select", 'options':['','emonTx','emonBase','emonGLCD','emonPlug','emonMeter','Arduino','No type']},
+    'typeid':{'title':"<?php echo _('Type'); ?>", 'type':"select", 'options':['','emonTx','emonBase','emonGLCD','emonPlug','emonMeter','Arduino','No type']},
 
     // Actions
     'edit-action':{'title':'', 'type':"edit"},
