@@ -136,7 +136,6 @@ function draw_map() {
 	}
 
 	d3.json(path + "map/nodes.json", function(error, graph) {
-    console.log(graph);
 	  force
 		  .nodes(graph.nodes)
 		  .links(graph.links);
