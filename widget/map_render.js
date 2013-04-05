@@ -13,10 +13,11 @@ function map_widgetlist()
 
 function map_init()
 {
-  //setup_widget_canvas('node');
-  $("#page").html('<div class="map"></div>');
-  $("#page").html('<script type="text/javascript" src="http://d3js.org/d3.v3.js"></script>');
-  draw_map();
+	/*if ($(".map").length <= 1){
+		//$("#page").append('<div class="map"></div>');
+		$("#page").append('<script type="text/javascript" src="http://d3js.org/d3.v3.js"></script>');
+		map_draw();
+	}*/
 }
 
 function map_slowupdate()
@@ -25,9 +26,10 @@ function map_slowupdate()
 
 function map_fastupdate()
 {
+	//map_draw();
 }
 
-function draw_map() {
+function map_draw() {
 	var width = 450,
 		height = 400,
 		radius = 4;

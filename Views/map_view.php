@@ -159,6 +159,6 @@ global $user, $path, $session;
 </div>
 
 <script type="text/javascript">
-	draw_map();
+	map_draw();
 	
 </script>
