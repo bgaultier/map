@@ -74,19 +74,25 @@
       	 $tmp = array();
       	 foreach ($nodes as $node) {
       	 	$node = ((array)$node);
-          // note: we need to check if $node['id'] belongs to user here as $userid attribute has been removed:
-          $id = $input->get_id($session['userid'],$node['id'],1);
-          $feeds = $input->get_processlist_desc($process,$id); 
+          $inputs = $input->getlist($session['userid']);
       	 	$feedlist = array();
-      	 	foreach ($feeds as $feeditem) {
-      	 		$field['id'] = $feed->get_field($feed->get_id($session['userid'],$feeditem[1]),'id'); // is get_field needed?
-      	 		$field['name'] = $feeditem[1];
-      	 		$feedlist[] = $field;
+      	 	foreach ($inputs as $inputitem) {
+      	 		$inputitem = ((array)$inputitem);
+      	 		// note : if the node id is also an input nodeid
+      	 		if($inputitem['nodeid'] == $node['id']) {
+      	 			// then we want to know all the feeds of this input
+      	 			$feeds = $input->get_processlist_desc($process,$inputitem['id']);
+      	 			// feedlist will contain all the feeds name
+      	 			foreach ($feeds as $feeditem) {
+		    	 			$field['id'] = $feed->get_field($feed->get_id($session['userid'],$feeditem[1]),'id'); // is get_field needed?
+		    	 			$field['name'] = $feeditem[1];
+		    	 			$feedlist[] = $field;
+      	 			}
+      	 		}
       	 	}
       	 	$node['feedlist'] = $feedlist;
       	 	$tmp[] = $node;
         }
-	//var_dump($tmp);
         if ($route->format == 'json') $result = array("nodes"=>$tmp, "links"=>array(array("source"=>0,"target"=>1,"value"=>1)));
       }
     }
